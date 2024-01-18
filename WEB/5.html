@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loop Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        section {
+            text-align: center;
+            margin: 50px auto;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
+</head>
+body>
+    <section>
+        <h1>JavaScript Loop Demo</h1>
+        <p>For Loop:</p>
+        <p id="forLoopOutput"></p>
+        <p>While Loop:</p>
+        <p id="whileLoopOutput"></p>
+        <p>Do-While Loop:</p>
+        <p id="doWhileLoopOutput"></p>
+        <p>Break a Loop:</p>
+        <p id="breakLoopOutput"></p>
+        <p>Break and Continue a Loop:</p>
+        <p id="breakContinueLoopOutput"></p>
+    </section>
+
+    <script>
+        // For Loop
+        var forLoopResult = "";
+        for (var i = 1; i <= 5; i++) {
+            forLoopResult += i + " ";
+        }
+        document.getElementById("forLoopOutput").innerText = forLoopResult;
+        // While Loop
+        var whileLoopResult = "";
+        var whileCounter = 1;
+        while (whileCounter <= 5) {
+            whileLoopResult += whileCounter + " ";
+            whileCounter++;
+        }
+        document.getElementById("whileLoopOutput").innerText = whileLoopResult;
+        // Do-While Loop
+        var doWhileLoopResult = "";
+        var doWhileCounter = 1;
+        do {
+            doWhileLoopResult += doWhileCounter + " ";
+            doWhileCounter++;
+        } while (doWhileCounter <= 5);
+        document.getElementById("doWhileLoopOutput").innerText = doWhileLoopResult;
+        // Break a Loop
+        var breakLoopResult = "";
+        for (var j = 1; j <= 10; j++) {
+            if (j === 6) {
+                break;
+            }
+            breakLoopResult += j + " ";
+        }
+        document.getElementById("breakLoopOutput").innerText = breakLoopResult;
+        // Break and Continue a Loop
+        var breakContinueLoopResult = "";
+        for (var k = 1; k <= 10; k++) {
+            if (k === 3 || k === 8) {
+                continue; // Skip iteration for k=3 and k=8
+            }
+            if (k === 6) {
+                break;
+            }
+            breakContinueLoopResult += k + " ";
+        }
+        document.getElementById("breakContinueLoopOutput").innerText = breakContinueLoopResult;
+    </script>
+</body>
+</html>

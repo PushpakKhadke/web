@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dialog Boxes Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        section {
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>JavaScript Dialog Boxes Demo</h1>
+
+        <button onclick="showAlert()">Show Alert</button>
+        <button onclick="showAlertWithLineBreaks()">Show Alert with Line Breaks</button>
+        <button onclick="showConfirm()">Show Confirm</button>
+        <button onclick="showPrompt()">Show Prompt</button>
+    </section>
+
+    <script>
+        function showAlert() {
+            alert("This is a simple alert box!");
+        }
+
+        function showAlertWithLineBreaks() {
+            alert("This is an alert box with line breaks:\n\nLine 1\nLine 2");
+        }
+
+        function showConfirm() {
+            var result = confirm("Do you want to proceed?");
+            if (result) {
+                alert("You clicked OK!");
+            } else {
+                alert("You clicked Cancel!");
+            }
+        }
+
+        function showPrompt() {
+            var userInput = prompt("Please enter something:", "Default value");
+            if (userInput === null) {
+                alert("You clicked Cancel!");
+            } else {
+                alert("You entered: " + userInput);
+            }
+        }
+    </script>
+</body>
+
+</html>

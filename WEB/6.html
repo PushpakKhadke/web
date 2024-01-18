@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Sorting Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        section {
+            text-align: center;
+            margin: 50px auto;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>JavaScript Array Sorting Demo</h1>
+        <p>Sort an Array Alphabetically (Ascending):</p>
+        <p id="sortAlphabetically"></p>
+        <p>Sort Numbers Numerically (Ascending):</p>
+        <p id="sortNumbersAscending"></p>
+        <p>Sort Numbers Numerically (Descending):</p>
+        <p id="sortNumbersDescending"></p>
+    </section>
+
+    <script>
+        // Sort an array alphabetically
+        var fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+        var sortedAlphabetically = fruits.slice().sort();
+        document.getElementById("sortAlphabetically").innerText = sortedAlphabetically.join(", ");
+        // Sort numbers numerically (ascending)
+        var numbersAscending = [10, 5, 8, 2, 1];
+        var sortedNumbersAscending = numbersAscending.slice().sort(function (a, b) {
+            return a - b;
+        });
+        document.getElementById("sortNumbersAscending").innerText = sortedNumbersAscending.join(", ");
+        // Sort numbers numerically (descending)
+        var numbersDescending = [10, 5, 8, 2, 1];
+        var sortedNumbersDescending = numbersDescending.slice().sort(function (a, b) {
+            return b - a;
+        });
+        document.getElementById("sortNumbersDescending").innerText = sortedNumbersDescending.join(", ");
+    </script>
+</body>
+</html>
